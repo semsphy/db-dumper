@@ -97,7 +97,7 @@ class PostgreSql extends DbDumper
             $this->port,
             $this->dbName,
             $this->userName,
-            $this->password,
+            addslashes($this->password),
         ];
 
         return implode(':', $contents);
